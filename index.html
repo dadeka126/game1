@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>贪吃蛇</title>
+  <style>
+    #map {
+      width: 800px;
+      height: 600px;
+      background-color: lightgray;
+      position: relative;
+    }
+
+  </style>
+
+
+</head>
+<body>
+<div id="map">
+</div>
+<!--<button id='btn'>点击出现蛇</button>-->
+<script src='tool.js'></script>
+<script src='food.js'></script>
+<script src='snake.js'></script>
+<script src='game.js'></script>
+<script>
+  var map = document.getElementById('map');
+    var food = new Food();
+    food.render();
+    var snake = new Snake();
+      snake.render();
+
+  var game = new Game();
+  game.start();
+</script>
+</body>
+</html>
